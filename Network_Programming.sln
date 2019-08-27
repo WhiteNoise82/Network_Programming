@@ -3,7 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29123.88
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPAddress_Ex1", "IPAddress_Ex1\IPAddress_Ex1.csproj", "{00FE1648-87F8-453D-86D6-F1F206E6C1B7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPAddress01", "IPAddress_Ex1\IPAddress01.csproj", "{00FE1648-87F8-453D-86D6-F1F206E6C1B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dns01", "DNS\Dns01.csproj", "{E78B38BC-548E-4DEF-B3FF-5EB8A03C1CAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPHostEntry01", "IPHostEntry01\IPHostEntry01.csproj", "{BFBBC7C1-69EA-4159-A889-C54E6DAA4732}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPEndPoint01", "IPEndPoint01\IPEndPoint01.csproj", "{A7981A03-04F6-467C-805F-07C4C2C7D2D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcpListener01", "TcpListner01\TcpListener01.csproj", "{C4F30D29-5A95-43C9-9E93-9B0406F3B418}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcceptTcpClient01", "AccetTcpClient01\AcceptTcpClient01.csproj", "{62B06333-5320-4517-8984-144A4742AA97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcpClient01", "TcpClient01\TcpClient01.csproj", "{348FDFDF-B787-48A1-B16B-E0BF2069096D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +27,30 @@ Global
 		{00FE1648-87F8-453D-86D6-F1F206E6C1B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00FE1648-87F8-453D-86D6-F1F206E6C1B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00FE1648-87F8-453D-86D6-F1F206E6C1B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E78B38BC-548E-4DEF-B3FF-5EB8A03C1CAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E78B38BC-548E-4DEF-B3FF-5EB8A03C1CAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E78B38BC-548E-4DEF-B3FF-5EB8A03C1CAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E78B38BC-548E-4DEF-B3FF-5EB8A03C1CAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFBBC7C1-69EA-4159-A889-C54E6DAA4732}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFBBC7C1-69EA-4159-A889-C54E6DAA4732}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFBBC7C1-69EA-4159-A889-C54E6DAA4732}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFBBC7C1-69EA-4159-A889-C54E6DAA4732}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7981A03-04F6-467C-805F-07C4C2C7D2D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7981A03-04F6-467C-805F-07C4C2C7D2D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7981A03-04F6-467C-805F-07C4C2C7D2D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7981A03-04F6-467C-805F-07C4C2C7D2D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4F30D29-5A95-43C9-9E93-9B0406F3B418}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4F30D29-5A95-43C9-9E93-9B0406F3B418}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4F30D29-5A95-43C9-9E93-9B0406F3B418}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4F30D29-5A95-43C9-9E93-9B0406F3B418}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62B06333-5320-4517-8984-144A4742AA97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62B06333-5320-4517-8984-144A4742AA97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62B06333-5320-4517-8984-144A4742AA97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62B06333-5320-4517-8984-144A4742AA97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{348FDFDF-B787-48A1-B16B-E0BF2069096D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{348FDFDF-B787-48A1-B16B-E0BF2069096D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{348FDFDF-B787-48A1-B16B-E0BF2069096D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{348FDFDF-B787-48A1-B16B-E0BF2069096D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
