@@ -1,24 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Net;
-using System.Net.Sockets;
 using System.IO;
+using System.Net.Sockets;
+using System.Windows.Forms;
 
 namespace ClientForm
 {
     public partial class Form1 : Form
     {
         private TcpClient tcpClient = null;
-        private NetworkStream ns;
-        private BinaryReader br;
-        private BinaryWriter bw;
+        private NetworkStream ns = null;
+        private BinaryReader br = null;
+        private BinaryWriter bw = null;
 
         int intValue;
         float floatValue;
@@ -31,18 +23,33 @@ namespace ClientForm
 
         private void BtnConnect_Click(object sender, EventArgs e)
         {
-            tcpClient = new TcpClient(txtServerIP.Text, 3000);
-            if (tcpClient.Connected)
+            try
             {
-                ns = tcpClient.GetStream();
-                br = new BinaryReader(ns);
-                bw = new BinaryWriter(ns);
-                MessageBox.Show("서버 접속 성공");
+                if (txtServerIP.Text.Length == 0)
+                {
+                    MessageBox.Show("서버의 IP주소가 입력되지 않았습니다.\n서버의 IP주소를 입력하여 주세요.");
+                    return;
+                }
+
+                tcpClient = new TcpClient(txtServerIP.Text, 3000);
+
+                if (tcpClient.Connected)
+                {
+                    ns = tcpClient.GetStream();
+                    br = new BinaryReader(ns);
+                    bw = new BinaryWriter(ns);
+                    MessageBox.Show("서버 접속 성공");
+                }
+                else
+                {
+                    MessageBox.Show("서버 접속 실패");
+                }
             }
-            else
+            catch (SocketException se)
             {
-                MessageBox.Show("서버 접속 실패");
+                MessageBox.Show("서버 연결이 거부되었습니다.\n서버의 상태 또는 서버 IP 주소의 확인이 필요합니다.");
             }
+
         }
 
         private void BtnTransfer_Click(object sender, EventArgs e)
@@ -65,11 +72,26 @@ namespace ClientForm
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            bw.Write(-1);
-            bw.Close();
-            br.Close();
-            ns.Close();
-            tcpClient.Close();
+            if (bw != null)
+            {
+                bw.Write(-1);
+                bw.Close();
+            }
+
+            if (br != null)
+            {
+                br.Close();
+            }
+
+            if (ns != null)
+            {
+                ns.Close();
+            }
+
+            if (tcpClient != null)
+            {
+                tcpClient.Close();
+            }
         }
     }
 }
